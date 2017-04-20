@@ -1,0 +1,288 @@
+/**Barebone Control Panel*/
+/**2017 Illumin Design*/
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #AEAEAE;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    color: #545454;
+    font-family: SourceSansPro, sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+input[type=text], input[type=password] {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    font-size: 13px;
+    padding: 5px;
+    width: 75%;
+}
+input[type=submit] {
+    background-color: #545454;
+    border: none;
+    color: #F5F5F5;
+    font-size: 13px;
+    padding: 10px 50px 10px 50px;
+}
+#adminbody {
+    height: 100%;
+    width: 100%;
+}
+#header {
+    background-color: #fff;
+    height: 40px;
+    /*overflow: hidden;*/
+    text-align: left;
+    width:100%;
+    visibility: visible;
+}
+#loginform {
+    background-color: #fff;
+    box-shadow: -1px 1px 5px 0 rgba(84,84,84,0.5);
+    margin:auto;
+    margin-top: 100px;
+    padding:25px;
+    width: 300px;
+}
+#logo {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding-left: 42px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    padding-top: 10px;
+}
+#toolheader {
+    background-color:#F5F5F5;
+    height: 25px;
+    width: 100%;
+}
+#toolcontainer {
+    /*display: table;*/
+    height: 100%;
+    text-align: left;
+    width: 100%;
+}
+#toolnav {
+    box-shadow: 1px 4px 5px 0 rgba(84,84,84,0.5);
+    display: inline-block;
+    float: left;
+    height: calc(100% - 80px);
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: width 250ms;
+    -moz-transition: width 250ms;
+    -ms-transition: width 250ms;
+    -o-transition: width 250ms;
+    transition: width 250ms;
+    width: 200px;
+}
+#toolnav a {
+    color: inherit;
+    text-decoration: none;
+}
+#toolnav:hover {
+    overflow-y: scroll;
+}
+#toolnav ul {
+    list-style-type: none;
+    clear: left;
+    margin: 0;
+    padding: 0;
+}
+#toolnav ul li {
+    display: block;
+    text-align: left;
+}
+#toolnav ul li a {
+    /*background-color: #FFFFFF;*/
+    background: none;
+    color: #545454;
+    display: block;
+    font-size: 16px;
+    padding: 5px 0 5px 35px;
+    text-decoration: none;
+}
+#toolnav ul li a:hover {
+    background-color: #F5F5F5;
+}
+#toolcontent {
+    display: inline-block;
+    height: calc(100% - 80px);
+    float: right;
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+    width: calc(99% - 200px);
+}
+#toolcontent:hover {
+    overflow-y: scroll;
+}
+#toolfooter {
+    background-color:#F5F5F5;
+    color: #AEAEAE;
+    height: 15px;
+    font-size:10px;
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+#tooloptions {
+    /*background-color: rgba(245, 245, 245, 0.75);*/
+    padding: 10px;
+    width: 99%;
+}
+#toolgrid {
+    box-shadow: 0 1px 5px 0 rgba(84,84,84,0.5);
+    overflow: hidden;
+    padding: 10px;
+    width: 99%;
+}
+#topmenu {
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    text-align: right;
+    z-index: 1000;
+}
+#topmenu ul {
+    list-style-type: none;
+    margin-top: 8px;
+}
+#topmenu ul li {
+    display: inline;
+    height: 40px;
+    text-transform: capitalize;
+}
+#topmenu ul li:last-child {
+    padding-right: 5px;
+}
+#topmenu ul li a {
+    padding: 14px 12px 12px 12px !important;
+    color: #545454;
+    font-size: 15px;
+    /*font-weight: bold;*/
+    text-decoration: none;
+}
+#topmenu ul li a:hover {
+    background-color: #545454;
+    color: #F5F5F5;
+}
+#topmenu_compact {
+    font-size: 18px;
+    font-weight: bold;
+    height: 38px;
+    padding-top: 2px;
+    text-align: center;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    cursor: pointer;
+}
+#topmenu_compact div {
+    width: 25px;
+    height: 3px;
+    background-color: #545454;;
+    margin: 6px 0;
+}
+#usermenu {
+    cursor: pointer;
+    height: 38px;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    text-align: center;
+    width: 38px;
+}
+#profileimage {
+    /*background-color: #545454;*/
+    border: 1px solid #AEAEAE;
+    border-radius: 40px;
+    /*box-shadow: 0 0 5px rgba(84, 84, 84, 0.25);*/
+    height: 99%;
+    overflow: hidden;
+    width: 99%;
+}
+#profileimage img {
+    margin: -3px 0 0 -4px;
+    width: 45px;
+    height: 45px;
+}
+a.btn_small {
+    background-color: #545454;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #F5F5F5;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+.toolicon {
+    float: left;
+    height: 25px;
+    padding: 5px;
+    width: 25px;
+}
+.toolname {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 0 0 0;
+}
+#usermenu-content {
+    border-bottom-left-radius: 10px;
+    display: none;
+    position: absolute;
+    right: -30px;
+    top: 39px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.98);
+    width: 360px;
+    box-shadow: -1px 2px 5px 0 rgba(84,84,84,0.25);
+    z-index: 1;
+}
+#usermenu-options {
+    cursor: default;
+    height: 70px;
+    margin-top: 40px;
+    margin-bottom:6px;
+}
+#usermenu:hover #usermenu-content {
+    display: block;
+}
+.border {
+    border: 1px solid #545454;
+}
+.hide {
+    display: none;
+}
+.dark {
+    background-color: #252525;
+}
+.darktrans {
+    background-color: rgba(84, 84, 84, 0.6);
+    color: #AEAEAE;
+}
+.light {
+    background-color: #FFFFFF;
+}
+.lighttrans {
+    background-color: rgba(245, 245, 245, 0.6);
+}
