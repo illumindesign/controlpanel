@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BBCP Help</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        body {
+            font-family: SourceSansPro, sans-serif;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        code {
+            background-color:#F5F5F5;
+            border: 3px solid #ccc;
+            color:#545454;
+            display: block;
+            font: 10px monospace;
+            /*margin: auto;*/
+            margin-top: 10px;
+            margin-bottom:10px;
+            padding:5px;
+            text-wrap: normal;
+        }
+        h1 {
+            background-color: #F5F5F5;
+            border-bottom: 1px solid #AEAEAE;
+            font-size: 30px;
+            height: 40px;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+        h1 img {
+            float: left;
+            padding: 5px;
+        }
+        h2 {
+            background-color: #545454;
+            color: #F5F5F5;
+            margin: 50px 0 0 0;
+            text-align: center;
+            width: 100%;
+        }
+        h3 {
+            background-color: #F5F5F5;
+            border: 1px solid #EAEAEA;
+            color: #545454;
+            margin: 50px 0 0 0;
+            padding-left: 3px;
+        }
+        nav {
+            border-right: 1px solid #AEAEAE;
+            float: left;
+            height: calc(100% - 45px);
+            overflow: hidden;
+            width: 200px;
+        }
+        nav:hover {
+            overflow-y: scroll;
+        }
+        nav ul:first-child {
+            /*border: 1px solid #0f0;*/
+        }
+        nav ul li a {
+            /*border: 1px solid #f00;*/
+            display: block;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 0 0 2px;
+        }
+        nav ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li ul {
+            margin: 0;
+            padding: 0 0 0 10px;
+        }
+        nav ul li ul li ul li {
+            margin: 0;
+            padding: 0 0 0 8px;
+
+        }
+        nav ul li ul li a {
+            color: #545454;
+            text-decoration: none;
+        }
+        nav ul li ul li a::before {
+            content: "∟";
+        }
+        nav ul li ul li a:hover {
+            background-color: #f5f5f5;
+        }
+        section {
+            padding-left:5%;
+            width:90%;
+        }
+        #content {
+            float: left;
+            height: calc(100% - 55px);
+            padding: 5px;
+            overflow-y: scroll;
+            width: calc(100% - 215px);
+        }
+        #title {
+            float: left;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+        .classname {
+            color: #f00;
+        }
+        .filename {
+            background-color: #ffffb8;
+            border: 1px solid #e2e297;
+            color: #999900;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>
+    <img src="assets/img/icon.png" border="0" height="30">
+    <span id="title">Barebone Control Panel</span>
+</h1>
+<nav>
+    <ul>
+        <li>File Structure
+            <ul>
+                <li><a href="#assets">Assets</a>
+                    <ul>
+                        <li><a href="#images">Images</a>
+                            <ul>
+                                <li><a href="#icons">Icons</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#fonts">Fonts</a></li>
+                        <li><a href="#css">CSS</a>
+                            <ul>
+                                <li><a href="#layout">Layout Elements</a></li>
+                                <li><a href="#effects">Visual Effects</a></li>
+                                <li><a href="#responsive">Responsive</a></li>
+                                <li><a href="#scrollbars">Scrollbars</a></li>
+                                <li><a href="#cssfonts">Fonts</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#javascript">Javascript</a>
+                            <ul>
+                                <li><a href="#jsfunctions">Functions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#php">PHP</a>
+                            <ul>
+                                <li><a href="#globals">Globals</a></li>
+                                <li><a href="#pages">Pages</a></li>
+                                <li><a href="#actions">Page Actions</a></li>
+                                <li><a href="#forms">Form Submission</a></li>
+                                <li><a href="#functions">Functions</a></li>
+                                <li><a href="#classes">Classes</a></li>
+                                <li><a href="#databases">Databases</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#index">Index</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div id="content">
+    <h1><a name="assets">File Structure / Assets</a></h1>
+    <p style="font-size: 18px;">
+        The foundation of a good application is an organized file structure; As development progresses, you may become compelled
+        to separate the functionality of your project into modules or libraries. This separation eases the complexity of your
+        project as it grows or becomes more advanced. The separation also allows for modular development, which can be useful in
+        a number of ways. This section explains the separation as it applies to the structure of this control panel skeleton.
+    </p>
+    <h2><a name="images">Images</a></h2>
+    <div class="filename">Location: /assets/img/</div>
+    <p>
+        This is the main images directory, you may need to add more folders depending on what types of images you are using
+        in your project.
+    </p>
+    <section>
+        <h3><a name="icons">Icons</a></h3>
+        <div class="filename">Location: /assets/img/icons/</div>
+        <p>
+            This is an example of how to extend the Images folder. Example icons have been added, but you may choose to use your own.
+        </p>
+    </section>
+    <h2><a name="fonts">Fonts</a></h2>
+    <div class="filename">Location: /assets/font/</div>
+    <p>
+        This directory stores the physical files for all of the assorted fonts. Move fonts into this folder as necessary.
+    </p>
+    <h2><a name="css">CSS</a></h2>
+    <div class="filename">Location: /assets/css/</div>
+    <p>
+        This folder is for the CSS you add to your project.
+    </p>
+    <section>
+        <h3><a name="layout">Layout Elements</a></h3>
+        <div class="filename">Location: /assets/css/illuminstyle.css</div>
+        <p>
+            <span class="classname">#header</span> {<br/>
+            &nbsp;&nbsp; This is the very top of the page. 40px tall; it contains the logo, main menu, compact menu and user menu.<br/>
+            }<br/>
+            <span class="classname">#adminbody</span> {<br/>
+            &nbsp;&nbsp; This sits directly below the header and contains the rest of the page. It stretches to fill 100% of the remaining space.<br/>
+            }<br/>
+            <span class="classname">#loginform</span> {<br/>
+            &nbsp;&nbsp; The style attributes for the login form.<br/>
+            }<br/>
+            <span class="classname">#logo</span> {<br/>
+            &nbsp;&nbsp; The style attributes for the logo.<br/>
+            }<br/>
+            <span class="classname">#topmenu</span> {<br/>
+            &nbsp;&nbsp; The style attributes for the main menu.<br/>
+            }<br/>
+            <span class="classname">#toolheader</span> {<br/>
+            &nbsp;&nbsp; When logged in, this is the first element in the <span class="classname">#adminbody</span>.
+            Visually, it sits between the <span class="classname">#header</span> and the <span class="classname">#toolcontainer</span>.<br/>
+            }<br/>
+            <span class="classname">#toolcontainer</span> {<br/>
+            &nbsp;&nbsp; This contains all of the navigation elements and controls of the tools installed in the control panel.<br/>
+            }<br/>
+            <span class="classname">#toolnav</span> {<br/>
+            &nbsp;&nbsp; The main navigation on the side which enables you to navigate the controls of the tools in the control panel.<br/>
+            }<br/>
+            <span class="classname">#toolcontent</span> {<br/>
+            &nbsp;&nbsp; The main controls of your control panel tools.<br/>
+            }<br/>
+            <span class="classname">#toolfooter</span> {<br/>
+            &nbsp;&nbsp; The bottom status bar of the control panel.<br/>
+            }<br/>
+            <span class="classname">#tooloptions</span> {<br/>
+            &nbsp;&nbsp; A semi-transparent area for tool control buttons to reside<br/>
+            }<br/>
+            <span class="classname">#toolgrid</span> {<br/>
+            &nbsp;&nbsp; An opaque area for tool controls and forms to reside.<br/>
+            }<br/>
+            <span class="classname">#usermenu</span> {<br/>
+            &nbsp;&nbsp; An area which houses the <span class="classname">#profileimage</span> and shows <span class="classname">#usermenu-content</span> on hover.<br/>
+            }<br/>
+            <span class="classname">#profileimage</span> {<br/>
+            &nbsp;&nbsp; Holds and sizes the user's avatar.<br/>
+            }<br/>
+            <span class="classname">#usermenu-content</span> {<br/>
+            &nbsp;&nbsp; A drop-down menu that appears when <span class="classname">#usermenu</span> is hovered.<br/>
+            }<br/>
+            <span class="classname">#usermenu-options</span> {<br/>
+            &nbsp;&nbsp; A container for basic user options to reside.<br/>
+            }<br/>
+        </p>
+        <h3><a name="responsive">Responsive Elements</a></h3>
+        <div class="filename">Location: /assets/css/responsive.css</div>
+        <p>
+            <span class="classname">#topmenu_compact</span> {<br/>
+            &nbsp;&nbsp; Appears as a button when the window is 760px wide or less.<br/>
+            }<br/>
+            <span class="classname">#toolnav</span> {<br/>
+            &nbsp;&nbsp; Shrinks to 65px when the window is 760px wide or less.<br/>
+            }<br/>
+            <span class="classname">#topmenu</span> {<br/>
+            &nbsp;&nbsp; Disappears to be triggered by <span class="classname">#topmenu_compact</span> when the window is 760px wide or less.<br/>
+            }<br/>
+        </p>
+        <h3><a name="effects">Visual Effects</a></h3>
+        <div class="filename">Location: /assets/css/effects.css</div>
+        <p>
+            <span class="classname">.stretch</span> {<br/>
+            &nbsp;&nbsp; When applied to a block element, this class will cause the element to resize smoothly on the event of a total size change request.<br/>
+            }<br/>
+            <span class="classname">.slide</span> {<br/>
+            &nbsp;&nbsp; When applied to a block element, this class will cause the element to resize smoothly on the event of a width change request.<br/>
+            }<br/>
+            <span class="classname">.fade</span> {<br/>
+            &nbsp;&nbsp; Make the element fade out when visibility changes.<br/>
+            }<br/>
+            <span class="classname">.blur</span> {<br/>
+            &nbsp;&nbsp; Apply a blur to the element and all its children.<br/>
+            }<br/>
+        </p>
+        <h3><a name="cssfonts">Fonts</a></h3>
+        <div class="filename">Location: /assets/css/fonts.css</div>
+        <p>
+            You must include this file in order to use the fonts declared within. You can add fonts to your project
+            adding the following code:
+            <code>
+                @font-face {<br/>
+                &nbsp;&nbsp; font-family: MyFontName;<br/>
+                &nbsp;&nbsp; src: url(../font/MyFontName.otf);<br/>
+                }
+            </code>
+            Once the font is added, you can add the font to your class with the following code:
+            <code>
+                .myClass {<br/>
+                &nbsp;&nbsp; font-family: MyFontName;<br/>
+                }
+            </code>
+        </p>
+        <h3><a name="scrollbars">Scroll Bars</a></h3>
+        <div class="filename">Location: /assets/css/scrollbars.css</div>
+        <p>
+            This file is an example of cusomization of the main scrollbars in your project. You can also specify the
+            scrollbar styles of individual classes or elements.
+        </p>
+    </section>
+    <h2><a name="javascript">Javascript</a></h2>
+    <div class="filename">Location: /assets/js/</div>
+    <p>
+        This folder is for the Javascript classes and libraries. Add Javascript files to this folder as necessary.
+    </p>
+    <section>
+        <h3><a name="jsfunctions">Functions</a></h3>
+        <div class="filename">Location: /assets/js/functions.js</div>
+        <p>
+            This is an example of how to extend the Javascript folder. This file contains random functions.
+        </p>
+    </section>
+    <h2><a name="php">PHP</a></h2>
+    <div class="filename">Location: /assets/php/</div>
+    <p>
+        This folder is for all of the server-side code.
+    </p>
+    <section>
+        <h3><a name="globals">Globals</a></h3>
+        <div class="filename">Location: /assets/php/global.php</div>
+        <p>
+            This is the code that is always run before each page load. For the most part, it sets default variables,
+            includes other files.
+        </p>
+        <h3><a name="pages">Pages</a></h3>
+        <div class="filename">Location: /assets/php/pages/</div>
+        <p>
+            This is the directory where you add new pages to the control panel (eg. /assets/php/pages/example.php). You can link to your new page like this:
+            <code>
+                &lt;a href="index.php?p=example"&gt;My New Page&lt;/a&gt;
+            </code>
+        </p>
+        <h3><a name="actions">Page Actions</a></h3>
+        <div class="filename">Location: /assets/php/act.php</div>
+        <p>
+            Actions that can be passed to your page through a link in the address bar.
+            <code>
+                &lt;a href="index.php?p=example&act=doThis"&gt;Action on My New Page&lt;/a&gt;
+            </code>
+        </p>
+        <h3><a name="forms">Form Submission</a></h3>
+        <div class="filename">Location: /assets/php/post.php</div>
+        <p>
+            This file handles all of the form submissions.
+        </p>
+        <h3><a name="functions">Functions</a></h3>
+        <div class="filename">Location: /assets/php/act.php</div>
+        <p>
+            Add global functions here.
+        </p>
+        <h3><a name="classes">Classes</a></h3>
+        <div class="filename">Location: /assets/php/classes.php</div>
+        <p>
+            Put classes here.. if you have many classes, you may want to create a "classes" subfolder instead.
+        </p>
+        <h3><a name="databases">Databases</a></h3>
+        <div class="filename">Location: /assets/php/pdo.php</div>
+        <p>
+            This enables the control panel to utilize a database connection through PDO. To enable databases, add your
+            information to this file and uncomment the following code to <b>global.php</b> (line 15)
+            <code>
+                require_once('assets/php/pdo.php');
+            </code>
+            To perform a database query, use code the $bbcp_connection variable:
+            <code>
+                try {<br/>
+                &nbsp;&nbsp; $q = $bbcp_connection->query("SELECT * FROM `my_settings` LIMIT 1");<br/>
+                &nbsp;&nbsp; $settings = $q->fetch();<br/>
+                } catch (PDOException $E) {<br/>
+                &nbsp;&nbsp; die('Query Error: '.$E);<br/>
+                }
+            </code>
+            To read more about PDO, <a href="http://php.net/manual/en/book.pdo.php" target="_blank">click here</a>.
+        </p>
+        <p>&nbsp;</p>
+    </section>
+    <h1><a name="index">File Structure / Index</a></h1>
+    <p style="font-size: 18px;">
+        This is the main file from which all of the other files are called.
+    </p>
+</div>
+</body>
+</html>
