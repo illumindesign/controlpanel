@@ -7,3 +7,5 @@ This solution is 100% free of 3rd party plugins and libraries. Using only native
 Fully Expandable
 
 Barebone Control Panel is already structured in a way that is friendly with expandability and modular / team development.
+
+https://illumindesign.net/barebonecontrolpanel/
