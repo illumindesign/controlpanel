@@ -8,4 +8,5 @@ Fully Expandable
 
 Barebone Control Panel is already structured in a way that is friendly with expandability and modular / team development.
 
+DEMO
 https://illumindesign.net/barebonecontrolpanel/
