@@ -1,9 +1,11 @@
 /**Barebone Control Panel*/
 /**2017 Illumin Design*/
 
+/* -----===== ELEMENTS =====----- */
 html, body {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 body {
     background-color: #AEAEAE;
@@ -16,14 +18,17 @@ body {
     font-family: SourceSansPro, sans-serif;
     height: 100%;
     margin: 0;
-    overflow: hidden;
     padding: 0;
     text-align: center;
     width: 100%;
 }
+h1 {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 input[type=text], input[type=password] {
     background-color: #FFFFFF;
-    border: 1px solid #EAEAEA;
+    border: 1px solid #DEDEDE;
     font-size: 13px;
     padding: 5px;
     width: 75%;
@@ -35,6 +40,12 @@ input[type=submit] {
     font-size: 13px;
     padding: 10px 50px 10px 50px;
 }
+
+
+
+
+
+/* -----===== OBJECTS =====----- */
 #adminbody {
     height: 100%;
     width: 100%;
@@ -58,7 +69,8 @@ input[type=submit] {
 #logo {
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
-    background-size: 40px 40px;
+    background-size: 30px 30px;
+    background-position: 5px 5px;
     padding-left: 42px;
     font-size: 18px;
     font-weight: bold;
@@ -134,7 +146,7 @@ input[type=submit] {
 #toolfooter {
     background-color:#F5F5F5;
     color: #AEAEAE;
-    height: 15px;
+    height: 13px;
     font-size:10px;
     position: absolute;
     bottom: 0;
@@ -220,40 +232,8 @@ input[type=submit] {
     text-align: center;
     width: 38px;
 }
-#profileimage {
-    /*background-color: #545454;*/
-    border: 1px solid #AEAEAE;
-    border-radius: 40px;
-    /*box-shadow: 0 0 5px rgba(84, 84, 84, 0.25);*/
-    height: 99%;
-    overflow: hidden;
-    width: 99%;
-}
-#profileimage img {
-    margin: -3px 0 0 -4px;
-    width: 45px;
-    height: 45px;
-}
-a.btn_small {
-    background-color: #545454;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: #F5F5F5;
-    padding: 5px 10px 5px 10px;
-    text-decoration: none;
-}
-.toolicon {
-    float: left;
-    height: 25px;
-    padding: 5px;
-    width: 25px;
-}
-.toolname {
-    float: left;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 6px 0 0 0;
+#usermenu:hover #usermenu-content {
+    display: block;
 }
 #usermenu-content {
     border-bottom-left-radius: 10px;
@@ -270,11 +250,80 @@ a.btn_small {
 #usermenu-options {
     cursor: default;
     height: 70px;
-    margin-top: 40px;
-    margin-bottom:6px;
+    /*margin-top: 40px;*/
+    margin-bottom:25px;
+    padding: 10px;
+    text-align: left;
 }
-#usermenu:hover #usermenu-content {
-    display: block;
+#usermenu-options a {
+    color: #545454;
+    font-size: 13px;
+    text-decoration: underline;
+}
+#usermenu-options img {
+    -webkit-box-shadow:  0 0 5px rgba(84,84,84,0.25);
+    -moz-box-shadow:  0 0 5px rgba(84,84,84,0.25);
+    box-shadow:  0 0 5px rgba(84,84,84,0.25);
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+    border: 1px solid #f5f5f5;
+    cursor: pointer;
+    float: left;
+    height: 80px;
+    margin-right: 10px;
+    width: 80px;
+}
+#usermenu-options img:hover {
+    filter: grayscale(100);
+}
+#usermenu-username {
+    font-size:27px;
+    font-weight:bold;
+}
+#profileimage {
+    /*background-color: #545454;*/
+    border: 1px solid #AEAEAE;
+    border-radius: 40px;
+    /*box-shadow: 0 0 5px rgba(84, 84, 84, 0.25);*/
+    height: 99%;
+    overflow: hidden;
+    width: 99%;
+}
+#profileimage img {
+    margin: -3px 0 0 -4px;
+    width: 45px;
+    height: 45px;
+}
+
+
+
+
+
+/* -----===== CLASSES =====----- */
+a.btn_small {
+    background-color: #545454;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #F5F5F5;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+a.btn_small:hover {
+    background-color: #999999;
+}
+.toolicon {
+    float: left;
+    height: 25px;
+    padding: 5px;
+    width: 25px;
+}
+.toolname {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 0 0 0;
 }
 .border {
     border: 1px solid #545454;

@@ -41,6 +41,7 @@
         position: absolute;
         top: 40px;
         left: 0;
+        overflow: hidden;
     }
     #topmenu ul {
         list-style-type: none;

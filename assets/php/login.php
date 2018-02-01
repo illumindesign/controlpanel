@@ -12,7 +12,7 @@ if (isset($_POST))
          * REPLACE THE STATEMENT BELOW WITH YOUR OWN USER SYSTEM
          */
         if ($_POST['user_name'] == 'user' && $_POST['user_password'] == 'password') {
-            $_SESSION['bbcp_loggedin'] = true;
+            $_SESSION[sPre.'_loggedin'] = true;
             header('Location: index.php');
             exit;
         } else {

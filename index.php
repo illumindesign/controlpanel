@@ -1,36 +1,34 @@
 <?php
 /**Barebone Control Panel*/
 /**2017 Illumin Design*/
-
-session_start();
 require_once('assets/php/global.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Barebone Control Panel</title>
-    <link rel="icon" href="assets/img/icon.png" />
-    <link rel="stylesheet" type="text/css" href="assets/css/illuminstyle.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/scrollbars.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/effects.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
-    <script type="text/javascript" src="assets/js/functions.js"></script>
+    <title><?=aTitle?> Control Panel</title>
+    <link rel="icon" href="<?=ga_img?>icon.png" />
+    <link rel="stylesheet" type="text/css" href="<?=ga_css?>illuminstyle.css">
+    <link rel="stylesheet" type="text/css" href="<?=ga_css?>responsive.css">
+    <link rel="stylesheet" type="text/css" href="<?=ga_css?>scrollbars.css">
+    <link rel="stylesheet" type="text/css" href="<?=ga_css?>effects.css">
+    <link rel="stylesheet" type="text/css" href="<?=ga_css?>fonts.css">
+    <script type="text/javascript" src="<?=ga_js?>functions.js"></script>
 </head>
 <body>
     <div id="header">
-        <div id="logo" class="">Barebone Control Panel</div>
+        <div id="logo" class=""><?=aTitle?> Control Panel</div>
         <?php
-        if ($_SESSION['bbcp_loggedin'] == true)
+        if ($_SESSION[sPre.'_loggedin'] == true)
         {
             ?>
-            <div id="topmenu_compact" class="fade" onclick="showTopMenu()">
+            <div id="topmenu_compact" class="fade" onclick="toggleTopMenu()">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <div id="topmenu" class="fade">
+            <div id="topmenu">
                 <ul>
                     <li><a href="index.php">dashboard</a></li>
                     <li><a href="?p=important&act=alerts">alerts</a></li>
@@ -40,10 +38,13 @@ require_once('assets/php/global.php');
                 </ul>
             </div>
             <div id="usermenu">
-                <div id="profileimage"><img src="assets/img/avatars/avatar.png"></div>
+                <div id="profileimage"><img src="<?=ga_av?>default.png"></div>
                 <div id="usermenu-content">
                     <div id="usermenu-options">
-                        [ user options can go here ]
+                        <img src="<?=ga_av?>default.png" border="0">
+                        <span id="usermenu-username">Endat Thaeman</span><br/>
+                        email@illumindesign.net<br/>
+                        <a href="?p=settings&act=profile">edit profile</a>
                     </div>
                     <a class="btn_small" href="?act=theme">change theme</a>
                     <a class="btn_small" href="?act=logout">logout</a>
@@ -55,14 +56,14 @@ require_once('assets/php/global.php');
     </div>
     <div id="adminbody">
         <?php
-        if ($_SESSION['bbcp_loggedin'] == true)
+        if ($_SESSION[sPre.'_loggedin'] == true)
         {
             ?>
             <div id="toolheader"></div>
             <div id="toolcontainer" class="<?=$theme_t?>">
                 <nav id="toolnav" class="<?=$theme_s?> slide">
                     <a href="?p=important">
-                        <img border="0" class="toolicon stretch" src="assets/img/icons/icon_important.png" />
+                        <img border="0" class="toolicon stretch" src="<?=ga_ico?>icon_important.png" />
                         <div class="toolname">Example Nav</div>
                     </a>
                     <ul>
@@ -70,7 +71,7 @@ require_once('assets/php/global.php');
                         <li><a href="?p=important&act=notifications">Notifications</a></li>
                     </ul>
                     <a href="?p=information">
-                        <img border="0" class="toolicon stretch" src="assets/img/icons/icon_help.png" />
+                        <img border="0" class="toolicon stretch" src="<?=ga_ico?>icon_help.png" />
                         <div class="toolname">Information</div>
                     </a>
                     <ul>
@@ -78,7 +79,7 @@ require_once('assets/php/global.php');
                         <li><a href="?p=information&act=resolved">Resolved</a></li>
                     </ul>
                     <a href="?p=management">
-                        <img border="0" class="toolicon stretch" src="assets/img/icons/icon_file.png" />
+                        <img border="0" class="toolicon stretch" src="<?=ga_ico?>icon_file.png" />
                         <div class="toolname">Management</div>
                     </a>
                     <ul>
@@ -86,7 +87,7 @@ require_once('assets/php/global.php');
                         <li><a href="?p=management&act=services">Services</a></li>
                     </ul>
                     <a href="?p=settings">
-                        <img border="0" class="toolicon stretch" src="assets/img/icons/icon_code.png" />
+                        <img border="0" class="toolicon stretch" src="<?=ga_ico?>icon_code.png" />
                         <div class="toolname">Settings</div>
                     </a>
                     <ul>
@@ -97,10 +98,10 @@ require_once('assets/php/global.php');
                 <div id="toolcontent">
                     <?php
                     if ($p == '') {
-                        include('assets/php/pages/index.php');
+                        include(ga_pages.'dashboard.php');
                     } else {
-                        if (file_exists('assets/php/pages/'.$p.'.php')) {
-                            include('assets/php/pages/'.$p.'.php');
+                        if (file_exists(ga_pages.$p.'.php')) {
+                            include(ga_pages.$p.'.php');
                         } else {
                             echo '<h1>Requested page not found!</h1>';
                         }
@@ -139,8 +140,7 @@ require_once('assets/php/global.php');
                 <input type="submit" value="login"/>
             </form>
             <?php
-            echo '</div>
-            <a href="help.html">help</a>';
+            echo '</div>';
         }
         ?>
     </div>
